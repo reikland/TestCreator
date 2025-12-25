@@ -2,8 +2,8 @@ from typing import Any, List
 
 from forecasting_tools import TopicGenerator
 
-from ftg.async_utils import run_coro
-from ftg.llm import normalize_litellm_model_name
+from async_utils import run_coro
+from llm import normalize_litellm_model_name
 
 
 def normalize(text: str) -> str:
