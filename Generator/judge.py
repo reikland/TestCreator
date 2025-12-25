@@ -2,9 +2,9 @@ from typing import Any, Dict, List
 
 from openai import OpenAI
 
-from ftg.parsing import parse_json_strictish
-from ftg.prompts import build_rank_prompt
-from ftg.types import RankedTopic
+from parsing import parse_json_strictish
+from prompts import build_rank_prompt
+from app_types import RankedTopic
 
 
 def rank_topics(

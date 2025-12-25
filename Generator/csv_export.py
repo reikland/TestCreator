@@ -3,7 +3,7 @@ from datetime import datetime
 from io import StringIO
 from typing import List
 
-from ftg.types import RankedTopic
+from app_types import RankedTopic
 
 
 def build_csv(top_topics: List[RankedTopic]) -> str:

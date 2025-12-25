@@ -1,12 +1,12 @@
 import streamlit as st
 
-from ftg.csv_export import build_csv
-from ftg.editor import edit_topics_with_llm
-from ftg.judge import rank_topics
-from ftg.llm import build_openrouter_client, normalize_openai_model_name
-from ftg.state import init_session_state, safe_rerun
-from ftg.topic_generation import generate_topics
-from ftg.types import AppRunConfig
+from csv_export import build_csv
+from editor import edit_topics_with_llm
+from judge import rank_topics
+from llm import build_openrouter_client, normalize_openai_model_name
+from state import init_session_state, safe_rerun
+from topic_generation import generate_topics
+from app_types import AppRunConfig
 
 
 def render_sidebar() -> AppRunConfig:
