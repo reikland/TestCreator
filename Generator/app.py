@@ -76,6 +76,7 @@ def main() -> None:
             st.session_state.top_topics = None
             st.session_state.csv_data = None
             st.session_state.edited_csv_data = None
+            st.session_state.is_csv_edited = False
             st.session_state.csv_version += 1
             safe_rerun()
 
@@ -104,6 +105,7 @@ def main() -> None:
         st.session_state.top_topics = top_topics
         st.session_state.csv_data = build_csv(top_topics)
         st.session_state.edited_csv_data = None
+        st.session_state.is_csv_edited = False
         st.session_state.csv_version += 1
 
     # -------------------------
@@ -142,16 +144,18 @@ def main() -> None:
                     st.error(str(error))
                 else:
                     st.session_state.top_topics = updated_topics
-                    st.session_state.edited_csv_data = build_csv(updated_topics)
+                    st.session_state.csv_data = build_csv(updated_topics)
+                    st.session_state.edited_csv_data = st.session_state.csv_data
+                    st.session_state.is_csv_edited = True
                     st.session_state.csv_version += 1
                     safe_rerun()
 
         # -------------------------
         # CSV EXPORT
         # -------------------------
-        csv_data = st.session_state.edited_csv_data or st.session_state.csv_data
+        csv_data = st.session_state.csv_data
         if csv_data:
-            is_edited = st.session_state.edited_csv_data is not None
+            is_edited = st.session_state.is_csv_edited
             st.markdown("---")
             st.subheader("Export")
 

@@ -10,6 +10,8 @@ def init_session_state() -> None:
         st.session_state.csv_data = None  # str | None
     if "edited_csv_data" not in st.session_state:
         st.session_state.edited_csv_data = None  # str | None
+    if "is_csv_edited" not in st.session_state:
+        st.session_state.is_csv_edited = False  # bool
     if "csv_version" not in st.session_state:
         st.session_state.csv_version = 0  # int
 
