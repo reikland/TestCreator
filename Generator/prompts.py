@@ -12,7 +12,6 @@ Criteria:
 - High epistemic uncertainty
 - Clear resolution criteria
 - Real-world importance
-- Forecastable within a reasonable time horizon
 
 Return STRICT JSON:
 
