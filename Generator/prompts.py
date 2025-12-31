@@ -10,7 +10,7 @@ Select the {top_k} most interesting forecasting questions from the list below.
 
 Criteria:
 - High epistemic uncertainty
-- Clear resolution criteria
+- Clear resolution criteria (Include the requirement that we should avoid selecting questions that — even if they have clear criteria — are realistically very hard to resolve due to lack of reliable data. For example, a question like “Number of H5N1-infected animals in Gambia” would be problematic, because Gambia is a low-capacity country with very limited likelihood of publishing such statistics.)
 - Real-world importance
 
 Return STRICT JSON:
